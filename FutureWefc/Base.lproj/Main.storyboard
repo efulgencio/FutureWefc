@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FutureWefc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipad" translatesAutoresizingMaskIntoConstraints="NO" id="WhS-GE-aOb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WhS-GE-aOb" secondAttribute="height" multiplier="16:9" id="Xe2-fa-6VT"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="W6D-PQ-9QV">
+                                <rect key="frame" x="37.5" y="277" width="300" height="97"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-5i-7AA" customClass="UITextFieldCustom" customModule="FutureWefc" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-Cr-xdA" customClass="ButtonRound" customModule="FutureWefc" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="67" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OIb-Cl-2G5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WhS-GE-aOb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="85d-Pw-Otp"/>
+                            <constraint firstItem="W6D-PQ-9QV" firstAttribute="top" secondItem="WhS-GE-aOb" secondAttribute="bottom" constant="66" id="AnM-hc-hAK"/>
+                            <constraint firstItem="W6D-PQ-9QV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C9Q-AQ-3bo"/>
+                            <constraint firstItem="W6D-PQ-9QV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Q3t-aF-7fb"/>
+                            <constraint firstItem="WhS-GE-aOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UE0-eF-mdb"/>
+                            <constraint firstItem="WhS-GE-aOb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nta-mP-swM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="CwT-Cr-xdA" id="F4q-aw-m7D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ipad" width="1920" height="750"/>
+    </resources>
+</document>
